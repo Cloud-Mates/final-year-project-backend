@@ -4,4 +4,5 @@ node_modules/
 *.md
 .cache
 secret-key
+secret-key-1
 secret-key-example
