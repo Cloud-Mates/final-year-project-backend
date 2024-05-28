@@ -1,0 +1,7 @@
+logs/
+node_modules/
+.git
+*.md
+.cache
+secret-key
+secret-key-example
