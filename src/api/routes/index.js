@@ -1,13 +1,14 @@
 import express from 'express';
 import k8s from './k8s.route.js';
 import ssh from './ssh.route.js';
+import authMiddleware from '../middleware/auth.middleware.js';
 
 const router = express.Router();
 
 /**
- * GET v1/status
+ * GET api/status
  */
-router.get('/status', (req, res) => res.send('OK'));
+router.get('/status', authMiddleware, (req, res) => res.status(200).send({ message: "Server is up!" }));
 
 /**
  * GET v1/docs

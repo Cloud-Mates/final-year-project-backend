@@ -3,6 +3,7 @@ node_modules/
 .git
 *.md
 .cache
+docs
 secret-key
 secret-key-1
 secret-key-example

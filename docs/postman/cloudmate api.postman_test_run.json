@@ -1,0 +1,566 @@
+{
+	"id": "bfc14453-fd9f-4d6a-abf9-fd8d48c42c5b",
+	"name": "cloudmate api",
+	"timestamp": "2024-05-30T19:20:59.871Z",
+	"collection_id": "17687169-d85af623-08de-4c6a-93f6-c772f17bf587",
+	"folder_id": 0,
+	"environment_id": "17687169-6bdf29ee-853b-4aea-86ff-f264f0874c1e",
+	"totalPass": 41,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-05-30T19:20:58.302Z",
+	"totalFail": 8,
+	"results": [
+		{
+			"id": "762521ca-70da-4782-9798-3a7c8d79e6af",
+			"name": "test",
+			"url": "http://192.168.29.150:4000/api/k8s/test",
+			"time": 33,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content type is application/json": true,
+				"Data object should exist and be an object": true,
+				"Verify the existence and format of metadata fields": true,
+				"Verify the existence and format of spec fields - finalizers": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Data object should exist and be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify the existence and format of metadata fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify the existence and format of spec fields - finalizers": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				33
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content type is application/json": true,
+					"Data object should exist and be an object": true,
+					"Verify the existence and format of metadata fields": true,
+					"Verify the existence and format of spec fields - finalizers": true
+				}
+			]
+		},
+		{
+			"id": "e32d9592-b0e0-4749-aa0f-1fd02c99a2f9",
+			"name": "dashboard",
+			"url": "localhost:4000/api/k8s/dashboard",
+			"time": 323,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Data object should exist in the response": true,
+				"ComponentStatus array is present and has expected number of elements": false,
+				"Name in componentStatus and conditions is a non-empty string": false,
+				"Nodes array is present and contains the expected number of elements": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Data object should exist in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ComponentStatus array is present and has expected number of elements": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Name in componentStatus and conditions is a non-empty string": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Nodes array is present and contains the expected number of elements": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				323
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Data object should exist in the response": true,
+					"ComponentStatus array is present and has expected number of elements": false,
+					"Name in componentStatus and conditions is a non-empty string": false,
+					"Nodes array is present and contains the expected number of elements": false
+				}
+			]
+		},
+		{
+			"id": "fc0dbdb2-2666-417d-ae2b-c6e9c7c7f35b",
+			"name": "events",
+			"url": "localhost:4000/api/k8s/events",
+			"time": 36,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content-Type is application/json": true,
+				"Validate the structure of the data object": true,
+				"Items array is present and has expected number of elements": true,
+				"Validate the 'involvedObject' and 'metadata' objects within the 'items' array": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the structure of the data object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Items array is present and has expected number of elements": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the 'involvedObject' and 'metadata' objects within the 'items' array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				36
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content-Type is application/json": true,
+					"Validate the structure of the data object": true,
+					"Items array is present and has expected number of elements": true,
+					"Validate the 'involvedObject' and 'metadata' objects within the 'items' array": true
+				}
+			]
+		},
+		{
+			"id": "fb995a8e-7213-49d5-97e6-a4fb5509fd88",
+			"name": "component status",
+			"url": "localhost:4000/api/k8s/componentStatus",
+			"time": 68,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"Validate the conditions array": true,
+				"CreationTimestamp is in a valid date format": false,
+				"Name in metadata is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the conditions array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"CreationTimestamp is in a valid date format": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Name in metadata is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				68
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"Validate the conditions array": true,
+					"CreationTimestamp is in a valid date format": false,
+					"Name in metadata is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "f0693503-64ae-43cc-8010-9d6a07d97bf5",
+			"name": "namespaces",
+			"url": "localhost:4000/api/k8s/namespaces",
+			"time": 37,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response has the required fields - message, data, namespaces": true,
+				"Validate the items array within the response": true,
+				"Content type is application/json": true,
+				"Check if creationTimestamp, labels, and name are present in the response": true,
+				"Finalizers array within spec is not empty": true
+			},
+			"testPassFailCounts": {
+				"Response has the required fields - message, data, namespaces": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the items array within the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if creationTimestamp, labels, and name are present in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Finalizers array within spec is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				37
+			],
+			"allTests": [
+				{
+					"Response has the required fields - message, data, namespaces": true,
+					"Validate the items array within the response": true,
+					"Content type is application/json": true,
+					"Check if creationTimestamp, labels, and name are present in the response": true,
+					"Finalizers array within spec is not empty": true
+				}
+			]
+		},
+		{
+			"id": "5ca3147d-032e-4cf2-8c68-6743b90d67d3",
+			"name": "nodes",
+			"url": "localhost:4000/api/k8s/nodes",
+			"time": 31,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response Content-Type header is application/json": true,
+				"Message field should be empty": false,
+				"Data object structure is valid": true,
+				"Verify the presence and structure of the 'items' array in the response": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field should be empty": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Data object structure is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify the presence and structure of the 'items' array in the response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				31
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response Content-Type header is application/json": true,
+					"Message field should be empty": false,
+					"Data object structure is valid": true,
+					"Verify the presence and structure of the 'items' array in the response": true
+				}
+			]
+		},
+		{
+			"id": "82ee0a7f-3241-492f-b0c6-4dadeace58f5",
+			"name": "pods",
+			"url": "localhost:4000/api/k8s/pods",
+			"time": 35,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content type is application/json": true,
+				"Data object has the correct structure": true,
+				"Items array is present and contains expected number of elements": true,
+				"Validate the creationTimestamp format in the metadata of each item": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Data object has the correct structure": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Items array is present and contains expected number of elements": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the creationTimestamp format in the metadata of each item": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				35
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content type is application/json": true,
+					"Data object has the correct structure": true,
+					"Items array is present and contains expected number of elements": true,
+					"Validate the creationTimestamp format in the metadata of each item": false
+				}
+			]
+		},
+		{
+			"id": "1954149b-bb13-4256-bfea-d010a43ff14d",
+			"name": "services",
+			"url": "localhost:4000/api/k8s/services",
+			"time": 50,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields - message and data": true,
+				"Validate the services object in the response": true,
+				"Verify the structure and content of the metadata for each item in the items array": false,
+				"Ensure that the ports array contains the expected structure and values": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - message and data": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the services object in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify the structure and content of the metadata for each item in the items array": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Ensure that the ports array contains the expected structure and values": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				50
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields - message and data": true,
+					"Validate the services object in the response": true,
+					"Verify the structure and content of the metadata for each item in the items array": false,
+					"Ensure that the ports array contains the expected structure and values": false
+				}
+			]
+		},
+		{
+			"id": "06940b34-9590-4514-bd84-044dbb79934d",
+			"name": "exec",
+			"url": "localhost:4000/api/ssh/exec",
+			"time": 8,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true,
+				"Response has the required field 'message'": true,
+				"Content-Type header is application/json": true,
+				"Message is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required field 'message'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true,
+					"Response has the required field 'message'": true,
+					"Content-Type header is application/json": true,
+					"Message is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "1b6a1b77-bbc6-4871-9364-b03071e5cdfe",
+			"name": "test server",
+			"url": "localhost:4000/api/status",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required Content-Type header": true,
+				"Message is a non-empty string": true,
+				"Message field is present in the response": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required Content-Type header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message field is present in the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required Content-Type header": true,
+					"Message is a non-empty string": true,
+					"Message field is present in the response": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 626,
+	"collection": {
+		"requests": [
+			{
+				"id": "762521ca-70da-4782-9798-3a7c8d79e6af",
+				"method": "POST"
+			},
+			{
+				"id": "e32d9592-b0e0-4749-aa0f-1fd02c99a2f9",
+				"method": "POST"
+			},
+			{
+				"id": "fc0dbdb2-2666-417d-ae2b-c6e9c7c7f35b",
+				"method": "POST"
+			},
+			{
+				"id": "fb995a8e-7213-49d5-97e6-a4fb5509fd88",
+				"method": "POST"
+			},
+			{
+				"id": "f0693503-64ae-43cc-8010-9d6a07d97bf5",
+				"method": "POST"
+			},
+			{
+				"id": "5ca3147d-032e-4cf2-8c68-6743b90d67d3",
+				"method": "POST"
+			},
+			{
+				"id": "82ee0a7f-3241-492f-b0c6-4dadeace58f5",
+				"method": "POST"
+			},
+			{
+				"id": "1954149b-bb13-4256-bfea-d010a43ff14d",
+				"method": "POST"
+			},
+			{
+				"id": "06940b34-9590-4514-bd84-044dbb79934d",
+				"method": "POST"
+			},
+			{
+				"id": "1b6a1b77-bbc6-4871-9364-b03071e5cdfe",
+				"method": "GET"
+			}
+		]
+	}
+}

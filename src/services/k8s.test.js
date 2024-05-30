@@ -3,7 +3,7 @@ const kc = new k8s.KubeConfig();
 
 
 export default async function test(config) {
-    console.log(config);
+    // console.log(config);
 
     try {
         kc.loadFromString(JSON.stringify(config));
@@ -23,7 +23,7 @@ export default async function test(config) {
 
         return { message: "API is working", data: nodes?.body, status: 200 };
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         return { message: "API is not working", error: error, status: 400 };
     }
 }
