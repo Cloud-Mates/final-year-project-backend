@@ -5,6 +5,7 @@ import events from "../../services/k8s.events.js"
 import namespaces from "../../services/k8s.namespaces.js"
 import nodes from "../../services/k8s.nodes.js"
 import services from "../../services/k8s.services.js"
+import pods from "../../services/k8s.pods.js"
 
 
 export default {
@@ -83,7 +84,7 @@ export default {
 
 
     pods: async (req, res, next) => {
-        const result = await test(req?.body)
+        const result = await pods(req?.body)
 
         if (result?.status == 200) {
             res.status(200).send({ message: result?.message, data: result?.data });
