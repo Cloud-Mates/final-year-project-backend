@@ -15,7 +15,7 @@ export default async function test(config) {
             conn.on('ready', () => {
                 conn.exec(command, (error, stream) => {
                     if (error) {
-                        return reject({ message: "Failed to establish a connection", error: error, status: 400 });
+                        return resolve({ message: "Failed to establish a connection", error: error, status: 400 });
                     }
                     stream.on('close', (code, signal) => {
                         // console.log('Stream :: close :: code: ' + code + ', signal: ' + signal);
