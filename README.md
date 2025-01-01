@@ -1,5 +1,7 @@
 ## Deployment
 
+```
+
 git clone git@github.com:Cloud-Mates/final-year-project-backend.git                                         // clone code
 
 cd final-year-project-backend                                                                               // enter into root dir of project
@@ -13,3 +15,5 @@ sudo docker run --name quickube --restart unless-stopped -p 4000:4000 -d quickub
 sudo docker logs $(sudo docker ps -a -q --filter name=quickube)                                             // get credentials from log
 
 sudo head -10 $(sudo docker inspect --format='{{.LogPath}}' $(sudo docker ps -a -q --filter name=quickube))  // alternatively
+
+```
